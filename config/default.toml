@@ -1,0 +1,25 @@
+# ai-character-sheet-turnaround — default config
+# Copy this to config/local.toml and edit. local.toml is gitignored.
+version = 4
+output_dir = "outputs"
+cache_dir = ".cache/turnaround"
+telemetry_enabled = false
+# remote_endpoint = "http://127.0.0.1:8188"
+
+[render]
+backend = "stub"          # "stub" | "local_diffusion" | "remote_renderer"
+width = 1024
+height = 1024
+steps = 28
+cfg_scale = 6.5
+sampler = "dpmpp_2m"
+seed = -1
+weights_dir = "weights"
+
+[sheet]
+poses = ["front", "back", "left", "right", "three_quarter"]
+include_expression_grid = true
+include_color_palette = true
+grid_columns = 5
+gutter_px = 24
+background_rgba = [255, 255, 255, 255]
